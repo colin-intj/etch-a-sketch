@@ -10,4 +10,10 @@ for (let i = 0; i < 256; i++) {
   drawingArea.appendChild(pixel);
 }
 
+for (const pixel of drawingArea.childNodes) {
+  pixel.onclick = () => {
+    pixel.style.backgroundColor = '#000';
+  };
+}
+
 document.body.appendChild(drawingArea);
