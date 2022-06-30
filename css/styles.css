@@ -24,3 +24,7 @@ body {
 .pixel {
   border: 1px solid #808080;
 }
+
+.pixel:hover {
+  background-color: #c8ffff;
+}
