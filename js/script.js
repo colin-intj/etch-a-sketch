@@ -7,13 +7,11 @@ drawingArea.className = 'drawing-area';
 for (let i = 0; i < 256; i++) {
   const pixel = document.createElement('div');
   pixel.className = 'pixel';
-  drawingArea.appendChild(pixel);
-}
-
-for (const pixel of drawingArea.childNodes) {
   pixel.onclick = () => {
     pixel.classList.toggle('colored');
   };
+
+  drawingArea.appendChild(pixel);
 }
 
 document.body.appendChild(drawingArea);
