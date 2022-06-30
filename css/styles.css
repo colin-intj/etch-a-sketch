@@ -1,5 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 .drawing-area {
   aspect-ratio: 1 / 1;
+  border: 1px solid gray;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
+}
+
+.pixel {
+  border: 1px solid gray;
 }
