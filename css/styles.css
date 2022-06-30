@@ -28,3 +28,7 @@ body {
 .pixel:hover {
   background-color: #c8ffff;
 }
+
+.colored {
+  background-color: #000;
+}

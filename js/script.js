@@ -12,7 +12,7 @@ for (let i = 0; i < 256; i++) {
 
 for (const pixel of drawingArea.childNodes) {
   pixel.onclick = () => {
-    pixel.style.backgroundColor = '#000';
+    pixel.classList.toggle('colored');
   };
 }
 
