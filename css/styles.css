@@ -2,11 +2,23 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 8px;
+}
+
 .drawing-area {
   aspect-ratio: 1 / 1;
   border: 1px solid gray;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
+  max-height: 100%;
 }
 
 .pixel {
