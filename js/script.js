@@ -1,15 +1,20 @@
 'use strict';
 
-const drawingArea = document.createElement('section');
+const drawingArea = document.createElement('table');
 drawingArea.className = 'drawing-area';
 
-// Creates 256 divs to represent pixels in a 16×16 drawing area grid
-for (let i = 0; i < 256; i++) {
-  const pixel = document.createElement('div');
-  pixel.className = 'pixel';
-  pixel.onclick = () => pixel.classList.toggle('colored');
+for (let rowNumber = 0; rowNumber < 16; rowNumber++) {
+  const row = document.createElement('tr');
 
-  drawingArea.appendChild(pixel);
+  for (let columnNumber = 0; columnNumber < 16; columnNumber++) {
+    const pixel = document.createElement('td');
+    pixel.className = 'pixel';
+    pixel.onclick = () => pixel.classList.toggle('colored');
+
+    row.appendChild(pixel);
+  }
+
+  drawingArea.appendChild(row);
 }
 
 document.body.appendChild(drawingArea);

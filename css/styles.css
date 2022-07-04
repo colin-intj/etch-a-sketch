@@ -16,13 +16,14 @@ body {
 .drawing-area {
   aspect-ratio: 1 / 1;
   border: 1px solid #808080;
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
+  border-collapse: collapse;
   max-height: 100%;
+  max-width: 100%;
 }
 
 .pixel {
   border: 1px solid #808080;
+  width: 999vmax;
 }
 
 .pixel:not(.colored):hover {
