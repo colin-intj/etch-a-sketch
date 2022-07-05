@@ -17,4 +17,4 @@ for (let rowNumber = 0; rowNumber < 16; rowNumber++) {
   drawingArea.appendChild(row);
 }
 
-document.body.appendChild(drawingArea);
+// document.body.appendChild(drawingArea);
