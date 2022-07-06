@@ -17,6 +17,11 @@ body {
   padding: 8px;
 }
 
+main {
+  display: grid;
+  grid-template-rows: min-content auto;
+}
+
 .drawing-area {
   aspect-ratio: 1 / 1;
   border: 1px solid #808080;
