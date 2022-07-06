@@ -31,9 +31,8 @@ main {
 }
 
 .drawing-area-container {
-  align-items: center;
+  align-items: start;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   position: relative;
 }
