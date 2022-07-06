@@ -24,6 +24,7 @@ main {
 
 .toolbar {
   align-items: center;
+  column-gap: 8px;
   display: flex;
   justify-content: center;
 }
