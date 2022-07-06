@@ -22,7 +22,12 @@ main {
   grid-template-rows: min-content auto;
 }
 
+.drawing-area-container {
+  position: relative;
+}
+
 .drawing-area {
+  position: absolute;
   aspect-ratio: 1 / 1;
   border: 1px solid #808080;
   border-collapse: collapse;
