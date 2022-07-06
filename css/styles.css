@@ -10,7 +10,9 @@ body {
 }
 
 body {
+  display: grid;
   font-family: Arial, Helvetica, sans-serif;
+  grid-template-rows: min-content auto;
   margin: 0;
   padding: 8px;
 }
