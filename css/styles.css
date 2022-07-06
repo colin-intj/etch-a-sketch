@@ -16,6 +16,10 @@ body {
   padding: 8px;
 }
 
+h1 {
+  text-align: center;
+}
+
 main {
   display: grid;
   grid-template-rows: min-content auto;
