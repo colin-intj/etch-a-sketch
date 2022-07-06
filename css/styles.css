@@ -23,7 +23,11 @@ main {
 }
 
 .drawing-area-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  justify-content: center;
 }
 
 .drawing-area {
