@@ -82,3 +82,7 @@ document.querySelector('.resize-drawing-area').onclick = () => {
   const length = +prompt('Enter new length:');
   drawingArea.resize(length, length);
 };
+
+document.querySelector('.clear-drawing-area').onclick = () => {
+  drawingArea.clear();
+};
