@@ -62,6 +62,15 @@ class DrawingArea {
       this.element.appendChild(row);
     }
   }
+
+  /** Clears the drawing area. */
+  clear() {
+    for (const row of this.element.childNodes) {
+      for (const pixel of row.childNodes) {
+        pixel.classList.remove('colored');
+      }
+    }
+  }
 }
 
 const drawingArea = new DrawingArea(16, 16);
