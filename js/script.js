@@ -33,6 +33,35 @@ class DrawingArea {
 
     this.element = element;
   }
+
+  /**
+   * Clears the drawing area and changes it's number of rows and columns.
+   * @param {number} newRows - New number of rows
+   * @param {number} newColumns - New number of columns
+   */
+  resize(newRows, newColumns) {
+    this.rows = newRows;
+    this.columns = newColumns;
+
+    // Completely removes every pixel from the drawing area
+    while (this.element.lastChild) {
+      this.element.removeChild(this.element.lastChild);
+    }
+
+    for (let rowNumber = 0; rowNumber < newRows; rowNumber++) {
+      const row = document.createElement('tr');
+
+      for (let columnNumber = 0; columnNumber < newColumns; columnNumber++) {
+        const pixel = document.createElement('td');
+        pixel.className = 'pixel';
+        pixel.onclick = () => pixel.classList.toggle('colored');
+
+        row.appendChild(pixel);
+      }
+
+      this.element.appendChild(row);
+    }
+  }
 }
 
 const drawingArea = new DrawingArea(16, 16);
