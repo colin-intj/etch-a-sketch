@@ -68,3 +68,8 @@ const drawingArea = new DrawingArea(16, 16);
 
 document.querySelector('.drawing-area-container')
     .appendChild(drawingArea.element);
+
+document.querySelector('.resize-drawing-area').onclick = () => {
+  const length = +prompt('Enter new length:');
+  drawingArea.resize(length, length);
+};
