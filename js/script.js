@@ -82,7 +82,12 @@ document.querySelector('.resize-drawing-area').onclick = () => {
   let length;
 
   do {
-    length = +prompt('Enter new length:');
+    length = prompt('Enter new length:');
+
+    if (length === null) return;
+
+    length = +length;
+
     if (isNaN(length)) {
       alert(`ERROR: You're input is not a number; please enter a number.`);
     } else if (length < 1 || length > 100) {
