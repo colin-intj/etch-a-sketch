@@ -85,6 +85,8 @@ document.querySelector('.resize-drawing-area').onclick = () => {
     length = +prompt('Enter new length:');
     if (isNaN(length)) {
       alert(`ERROR: You're input is not a number; please enter a number.`);
+    } else if (length < 1 || length > 100) {
+      alert('ERROR: You can only entire sizes between 1 and 100.');
     }
   } while (isNaN(length));
 
