@@ -79,7 +79,15 @@ document.querySelector('.drawing-area-container')
     .appendChild(drawingArea.element);
 
 document.querySelector('.resize-drawing-area').onclick = () => {
-  const length = +prompt('Enter new length:');
+  let length;
+
+  do {
+    length = +prompt('Enter new length:');
+    if (isNaN(length)) {
+      alert(`ERROR: You're input is not a number; please enter a number.`);
+    }
+  } while (isNaN(length));
+
   drawingArea.resize(length, length);
 };
 
