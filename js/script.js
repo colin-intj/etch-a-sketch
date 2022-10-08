@@ -16,6 +16,12 @@ class DrawingArea {
 
     const element = document.createElement('table');
     element.className = 'drawing-area';
+    element.onclick = (event) => {
+      const eventTarget = /** @type {HTMLElement} */ (event.target);
+      if (eventTarget.tagName === 'TD') {
+        eventTarget.classList.toggle('colored');
+      }
+    };
 
     for (let rowNumber = 0; rowNumber < rows; rowNumber++) {
       const row = document.createElement('tr');
@@ -23,8 +29,6 @@ class DrawingArea {
       for (let columnNumber = 0; columnNumber < columns; columnNumber++) {
         const pixel = document.createElement('td');
         pixel.className = 'pixel';
-        pixel.onclick = () => pixel.classList.toggle('colored');
-
         row.appendChild(pixel);
       }
 
@@ -54,8 +58,6 @@ class DrawingArea {
       for (let columnNumber = 0; columnNumber < newColumns; columnNumber++) {
         const pixel = document.createElement('td');
         pixel.className = 'pixel';
-        pixel.onclick = () => pixel.classList.toggle('colored');
-
         row.appendChild(pixel);
       }
 
