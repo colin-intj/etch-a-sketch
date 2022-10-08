@@ -17,7 +17,7 @@ class DrawingArea {
     const element = document.createElement('table');
     element.className = 'drawing-area';
     element.onclick = (event) => {
-      const eventTarget = /** @type {HTMLElement} */ (event.target);
+      const eventTarget = /** @type {Element} */ (event.target);
       if (eventTarget.tagName === 'TD') {
         eventTarget.classList.toggle('colored');
       }
