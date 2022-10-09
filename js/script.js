@@ -20,6 +20,8 @@ class DrawingArea {
       const eventTarget = /** @type {Element} */ (event.target);
       if (eventTarget.tagName === 'TD') {
         eventTarget.classList.toggle('colored');
+      } else {
+        event.stopPropagation();
       }
     };
 
